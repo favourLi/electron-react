@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 function RemSet() {
-  const baseSize = 10;
+  const baseSize = 20;
   function setRemFc() {
     const scale = document.documentElement.clientWidth / 1920;
     document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + "px";

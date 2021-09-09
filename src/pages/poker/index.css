@@ -31,13 +31,16 @@ body{
 	right:0;
 	top:0;
 }
+.pai.active{
+	transform: translateY(-20px);
+}
 .screen .moveright,.screen .moveleft{
 	width: 150px;
 	height: 80px;
 	position: absolute;
 	left:430px;
 	bottom: 80px;
-	z-index: 100;
+	z-index: 2;
 	/*background: rgba(255,255,255,0.8);*/
 	border-radius: 10px;
 	text-align: center;
@@ -98,6 +101,9 @@ body{
 	height:130px;
 	background: url('./image/p2.png') no-repeat center;
 }
+.mask-contain{
+
+}
 .mask{
 	position: fixed;
 	top:150px;
@@ -129,13 +135,11 @@ body{
 }
 .mask .mask-inner h1{
 	text-align: center;
-	padding-top: 36px;
+	padding-top: 26px;
 	color: #fff;
 }
 .mask .mask-inner p{
 	color: #fff;
-	padding-top: 16px;
-	line-height: 40px;
 }
 .over{
 	top:200px;
