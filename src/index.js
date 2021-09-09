@@ -1,17 +1,22 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {RemSet} from "./util/rem";
+import './index.css';
+import "tailwindcss/tailwind.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <RemSet />
+    <Switch>
+      <Route path="/" component={App}></Route>
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
